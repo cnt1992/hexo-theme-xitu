@@ -1,4 +1,4 @@
-![hexo-theme-xitu](source/img/preview.jpeg)
+![hexo-theme-xitu](https://github.com/cnt1992/hexo-theme-xitu/blob/master/source/img/preview.JPEG)
 
 ## 安装
 
