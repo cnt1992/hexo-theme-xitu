@@ -1,0 +1,37 @@
+#loading-cover.vertical-center.text-center
+    a(href= url_for())
+        p(style="font-size: 2em; margin-bottom: 0;")
+            img.inline(src= theme.logo)
+            span!= theme.title
+    .inner
+        hr
+        p
+            i.ion-load-c.span
+            span 加载中
+        .not-compatible-message(style="display:none;")
+            p.text-blue 您的浏览器不兼容，请升级            
+        hr
+        p.tags            
+            each value, key in theme.tags
+                a.tag(href= value)
+                    != key.toUpperCase()
+script.
+    (function() {
+        function getUserAgent () {
+            var reg = new RegExp('(opera|chrome|safari|firefox|msie|trident(?=\\/))\\/?(\\\\s)*(\\\\d+)', 'i');
+            var ua = navigator.userAgent;
+            var M = ua.match(reg) || [];
+            return M[0];
+        }
+        var userAgentRegx = new RegExp('^MSIE (6|7|8|9)')
+
+        if (userAgentRegx.test(getUserAgent())) {
+            document.getElementById('not-compatible-message').style.display = 'block';
+            document.getElementById('loading-p').style.display = 'none'
+            document.execCommand('Stop');
+        }
+        setTimeout(function(){
+            var loadingCover = document.getElementById('loading-cover');
+            loadingCover.className += ' done';
+        },800);
+    })();

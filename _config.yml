@@ -1,0 +1,37 @@
+menu:
+    index:
+        link: /
+        class: ion-home
+    archive:
+        link: /archives/
+        class: ion-ios-box
+    categories:
+        link: /categories/
+        class: ion-ios-copy
+
+
+foot:
+    About: /about/
+    GitHub: https://github.com/cnt1992
+
+favicon: /favicon.png
+logo: /favicon.png
+
+# Comment
+# e.g disqus: seansun
+disqus:
+duoshuo: 
+
+# Analytics
+# google-analytics:
+ga: 
+# baidu-analytics:
+ba: 
+
+# Copyright Infomation
+startyear: 2015
+
+# Font CDN
+#true : use google fonts api, not stable for chinese visitor sometimes, caused by force majeure factor
+#false: use useso fonts api instead of google's, great response speed for chinese visitor
+googlefonts: true

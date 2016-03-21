@@ -1,0 +1,156 @@
+nav {
+    margin-bottom:.5em
+}
+nav .actions>.action {
+    font-size:.8em;
+    padding:.8em 1.5em;
+    -webkit-transition:border-bottom, .3s;
+    transition:border-bottom, .3s
+}
+nav .actions>.action.action-nav {
+    border-bottom-color:transparent!important
+}
+nav .actions>.action .action-nav-active {
+    padding-bottom:0
+}
+nav .actions>.action .action-list {
+    top:3em
+}
+nav.bg {
+    background-color:#f8f9fa;
+    border-bottom:1px solid #f1f1f1
+}
+nav.bg .actions>.action {
+    border-bottom:2px solid transparent
+}
+nav.bg .actions>.action.true, nav.bg .actions>.action:hover {
+    color:#007fff;
+    border-bottom-color:#007fff
+}
+nav.bg .actions>.action.true {
+    font-weight:500
+}
+nav.sparse .actions>.action {
+    font-size:1rem;
+    vertical-align:top;
+    padding:.8em .3em;
+    margin:0 .5em
+}
+nav .secondary .action-list {
+    left:auto;
+    right:0
+}
+
+.tooltip {
+    position:fixed;
+    z-index:9;
+    border:1px solid #ddd;
+    background:#fff;
+    padding:1em;
+    text-align:center;
+    width:12em
+}
+.tooltip .user-name {
+    margin-top:.5em
+}
+.tooltip .user-description {
+    color:#666;
+    font-size:.8em
+}
+.tooltip .user-meta {
+    margin-top:1em
+}
+.users-list-cover {
+    z-index:8;
+    background-color:hsla(0, 0%, 100%, .95);
+    overflow-y:scroll
+}
+.users-list-close {
+    position:fixed;
+    z-index:9;
+    top:1em;
+    right:1em;
+    padding:.5em 1.5em
+}
+.users-list {
+    position:relative;
+    max-width:5in;
+    margin:0 auto;
+    padding:4em 0
+}
+.users-list-item {
+    padding:.5em
+}
+.users-list-item .avatar {
+    margin-right:1em
+}
+.users-list-item .user-info {
+    display:inline-block;
+    vertical-align:top;
+    max-width:50%
+}
+.users-list-item .subscribe-button {
+    top:1em
+}
+.with-aside .main, .with-aside .modal, .with-aside header {
+    margin-left:13em
+}
+
+header {
+    position:fixed;
+    z-index:5;
+    top:0;
+    left:0;
+    right:0;
+    background:#fff;
+    border-bottom:1px solid #f1f1f1;
+    color:#909090;
+    height:3em
+}
+header .action {
+    padding:.5em .8em;
+    vertical-align:top;
+    line-height:2em
+}
+header .action-list {
+    top:3.75em;
+    left:0;
+    right:0;
+    color:#666;
+    font-size:.8em
+}
+header .action-nav {
+    padding-bottom:1em
+}
+header .avatar.inline {
+    width:2em;
+    height:2em
+}
+header .new-entry-button {
+    padding:.2em 1.5em;
+    background-color:#007fff;
+    border-radius:2em;
+    color:#fff;
+    line-height:2em;
+    font-size:.8em;
+    font-weight:500
+}
+.banner {
+    position:relative;
+    text-align:center;
+    padding:1.5em;
+    font-size:.8em
+}
+.banner .banner-screenshot {
+    width:100%
+}
+.banner .banner-close {
+    position:absolute;
+    top:0;
+    right:0;
+    padding:1.7em 2em 1em 1em;
+    color:hsla(0, 0%, 100%, .5)
+}
+.banner .banner-close:active, .banner .banner-close:hover {
+    color:#fff
+}

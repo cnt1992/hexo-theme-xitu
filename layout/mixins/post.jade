@@ -1,0 +1,61 @@
+mixin postInfo(item)
+    .post-time
+        != full_date(item.date, 'll')
+
+//- Index Page
+mixin posts()
+    .container
+        .entries-list
+            ul.entries
+                - page.posts.each(function (item) {
+                    li.entry
+                        .entry-container
+                            .entry-collection.text-pointer
+                                i.collection-arrow.ion-arrow-up-b
+                                .collection-count 13
+                            - var cover = item.cover || 'http://img.qiang.it/220x120'
+                            .entry-screenshot
+                                img.entry-screenshot-img(src= cover)                            
+                            .entry-info
+                                .entry-title
+                                    a.entry-link(href= url_for(item.path))
+                                        != item.title
+                                .entry-tags.tags
+                                    .tag.clean.no-pointer
+                                        +postInfo(item)
+                                    .tag.clean
+                            .entry-meta
+                                .action.entry-author
+                                    img.avatar.entry-author-avatar(src= url_for(item.avatar))
+                                .action.entry-comments-count
+                                    i.ion-ios-chatbubble-outline
+                                    span 2
+
+                - })
+
+//- Archive Page
+mixin postList()
+    .archive
+        - var year = 0;
+        - var change = false;
+        - page.posts.each(function (item) {
+            - var itemYear = date(item.date, 'YYYY') - 0;
+            - change = year !== itemYear;
+            - year = change ? itemYear : year;
+            if change 
+                h2.archive-year!= year
+            .post-item
+                +postInfo(item)
+                a.post-title-link(href= url_for(item.path))
+                    != item.title
+        - })
+
+//- Post Page
+mixin post(item)
+    .post
+        article.post-block
+            h1.post-title
+                != item.title
+            +postInfo(item)
+            .post-content
+                != item.content

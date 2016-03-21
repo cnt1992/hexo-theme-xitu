@@ -1,0 +1,402 @@
+.main {
+    margin-top:3em
+}
+.main+.main {
+    margin-top:0
+}
+.container {
+    width:50pc;
+    margin-left:auto;
+    margin-right:auto;
+    position:relative
+}
+footer {
+    bottom:0;
+    left:0;
+    right:0;
+    padding:.5em 1em;
+    background:#f8f9fa;
+    border-top:1px solid #f1f1f1
+}
+.bottom-right, footer {
+    position:fixed;
+    z-index:5
+}
+.bottom-right {
+    bottom:1em;
+    right:1em;
+    background:#fff;
+    border:1px solid #f1f1f1;
+    text-align:center;
+    -webkit-transition:right, .3s;
+    transition:right, .3s
+}
+.bottom-right .corner-box {
+    display:block;
+    padding:.5em 1em;
+    color:#909090;
+    cursor:pointer;
+    -webkit-transition:background-color, .3s;
+    transition:background-color, .3s
+}
+.bottom-right .corner-box.true, .bottom-right .corner-box:active, .bottom-right .corner-box:hover {
+    background-color:#f1f1f1
+}
+.bottom-right .corner-box.true {
+    color:#007fff
+}
+.bottom-right i {
+    display:inline-block;
+    width:1em;
+    text-align:center
+}
+.view.no-padding {
+    padding:0
+}
+.view article {
+    margin:2em 0
+}
+.view .inner {
+    width:50vw;
+    max-width:5in
+}
+
+@-webkit-keyframes loading {
+    0% {
+        left:0;
+        width:0
+    }
+    45% {
+        left:45%;
+        width:10%
+    }
+    to {
+        left:100%
+    }
+}
+@keyframes loading {
+    0%, to {
+        width:0
+    }
+    0% {
+        left:0
+    }
+    45% {
+        left:45%;
+        width:10%
+    }
+    to {
+        left:100%;
+        width:0
+    }
+}
+.loading-bar {
+    position:fixed;
+    z-index:6;
+    left:0;
+    top:0;
+    right:0;
+    height:.2em
+}
+.loading-bar .progress {
+    position:absolute;
+    height:100%;
+    background:#007fff;
+    -webkit-animation:loading 1.2s linear infinite alternate;
+    animation:loading 1.2s linear infinite alternate
+}
+.alerts {
+    position:fixed;
+    z-index:9;
+    top:3em;
+    right:.5em;
+    width:10em;
+    color:#666
+}
+.alerts .alert {
+    cursor:pointer;
+    padding:.5em .8em;
+    margin:.5em 0;
+    color:rgba(0, 127, 255, .8);
+    border:1px solid rgba(0, 127, 255, .5);
+    background-color:#e6f2ff;
+    font-size:.8em;
+    -webkit-transition:color, .3s;
+    transition:color, .3s
+}
+.alerts .alert:active, .alerts .alert:hover {
+    color:#007fff;
+    border-color:#007fff
+}
+.alerts .alert-close {
+    float:right;
+    margin-left:.5em;
+    margin-bottom:.5em;
+    line-height:1.3em
+}
+.alerts .alert-action {
+    display:block;
+    color:rgba(0, 127, 255, .8);
+    text-align:center;
+    margin:.5em -.8em -.5em;
+    border-top:1px solid rgba(0, 127, 255, .5);
+    padding:.5em .8em;
+    background-color:#cce5ff
+}
+#loading-cover {
+    z-index:10;
+    background:#f1f1f1;
+    color:#666;
+    padding:1em 1em 5em;
+    -webkit-transition:all, 1.5s;
+    transition:all, 1.5s
+}
+#loading-cover.done {
+    opacity:0;
+    z-index:-1;
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2)
+}
+#loading-cover .footer {
+    position:absolute;
+    bottom:1em;
+    left:0;
+    width:100%;
+    font-size:.8em
+}
+
+.tag-header {
+    position:relative;
+    padding:3em 0;
+    background-color:#f8f9fa
+}
+.tag-header.background-cover {
+    color:#fff;
+    text-shadow:2px 2px 5px #666
+}
+.tag-header.background-cover .tag-info {
+    color:#fff
+}
+.tag-header .tag-name {
+    font-weight:600;
+    font-size:1.5em
+}
+.tag-header .tag-info {
+    font-size:.8em;
+    color:#666
+}
+.tag-meta .inline {
+    font-size:1.2em
+}
+.profile {
+    position:relative;
+    padding:3em 1em;
+    overflow:hidden;
+    color:#fff
+}
+.profile.my-profile .contenteditable {
+    -webkit-transition:background-color, .3s;
+    transition:background-color, .3s
+}
+.profile.my-profile .contenteditable:hover {
+    cursor:pointer;
+    background-color:hsla(0, 0%, 100%, .1)
+}
+.profile.my-profile .contenteditable[contenteditable=true] {
+    cursor:auto;
+    background-color:hsla(0, 0%, 100%, .2)
+}
+.profile .text-muted, .profile a {
+    color:hsla(0, 0%, 100%, .6)
+}
+.profile a:active, .profile a:hover {
+    color:#fff
+}
+.profile-background {
+    position:absolute;
+    top:-2em;
+    left:-2em;
+    right:-2em;
+    bottom:-2em;
+    -webkit-filter:blur(3em);
+    filter:blur(3em)
+}
+.profile-background-dark {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0, 0, 0, .5)
+}
+.profile-avatar-container, .profile-info-container {
+    display:inline-block;
+    vertical-align:top
+}
+.profile-avatar-container {
+    width:30%;
+    text-align:center
+}
+.profile-info-container {
+    width:70%
+}
+
+.profile-avatar-input-container {
+    position:relative;
+    display:inline-block;
+    width:7em;
+    height:7em
+}
+.profile-avatar-input-container:hover .profile-avatar-cover {
+    opacity:1
+}
+.profile-avatar-input-container:hover .profile-avatar-edit-icon {
+    opacity:.8
+}
+.profile-avatar-input-container .avatar {
+    width:7em;
+    height:7em;
+    border:none
+}
+.profile-avatar-input {
+    width:100%
+}
+.profile-avatar-cover, .profile-avatar-input {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    cursor:pointer;
+    opacity:0
+}
+.profile-avatar-cover {
+    background-color:rgba(51, 51, 51, .5);
+    color:#fff;
+    border-radius:50%
+}
+.profile-avatar-cover, .profile-avatar-edit-icon {
+    -webkit-transition:opacity, .3s;
+    transition:opacity, .3s
+}
+.profile-avatar-edit-icon {
+    position:absolute;
+    bottom:-.3em;
+    right:-.3em;
+    opacity:.6;
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg)
+}
+.profile-name {
+    font-size:1.5em;
+    font-weight:600
+}
+.profile-description {
+    margin:1em 0;
+    color:hsla(0, 0%, 100%, .6)
+}
+.profile-user-action {
+    margin-top:1em
+}
+.profile-user-action .subscribe-button {
+    width:5em;
+    height:2em
+}
+.profile-user-action .subscribe-button:after {
+    top:.2em
+}
+.profile-user-action .subscribe-button.true {
+    width:5em
+}
+.profile-actions-wrapper {
+    border-bottom:1px solid #f1f1f1
+}
+.profile-actions {
+    text-align:center
+}
+.profile-actions .action {
+    cursor:pointer;
+    padding:1em;
+    border-bottom:2px solid transparent;
+    border-left:1px solid #f1f1f1;
+    -webkit-transition:color, .3s;
+    transition:color, .3s
+}
+.profile-actions .action:last-child {
+    border-right:1px solid #f1f1f1
+}
+.profile-actions .action.true, .profile-actions .action:hover {
+    border-bottom-color:#007fff;
+    background-color:#f8f9fa
+}
+.profile-actions .action.true .action-desc, .profile-actions .action.true .action-title, .profile-actions .action:hover .action-desc, .profile-actions .action:hover .action-title {
+    color:#007fff
+}
+.profile-actions .action-title {
+    font-size:1.1em;
+    color:#666
+}
+.profile-actions .action-desc {
+    font-size:.8em;
+    color:#909090
+}
+.profile-role {
+    display:inline-block;
+    padding:.15em .8em;
+    border:1px solid #007fff;
+    border-radius:1em;
+    color:#007fff;
+    font-size:.8em;
+    margin-right:1em
+}
+.profile-meta {
+    margin:1em 0 .5em
+}
+.profile-meta .action {
+    font-size:1rem;
+    vertical-align:top;
+    margin:0 .5em
+}
+.avatar-input {
+    position:relative;
+    cursor:pointer;
+    text-align:center
+}
+.avatar-input input[type=file] {
+    cursor:pointer;
+    opacity:0;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:100%
+}
+.avatar-input .avatar {
+    width:5em;
+    height:5em
+}
+.entry-detail-body .users-list .user-info-input, .flex .user-info-input, .profile-actions .user-info-input {
+    -webkit-box-flex:3;
+    box-flex:3;
+    -webkit-flex:3;
+    -moz-flex:3;
+    -ms-flex:3;
+    flex:3
+}
+.password-form input[type=submit], .user-info-input input[type=submit] {
+    margin-left:.5em
+}
+.search-tag-input {
+    max-width:5em;
+    margin-left:.5em
+}
+nav.search {
+    border-bottom:1px solid #f1f1f1;
+    overflow:hidden
+}
+nav.search .search-input {
+    width:50pc;
+    max-width:100%;
+    padding:0;
+    border:none
+}

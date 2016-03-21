@@ -1,0 +1,7 @@
+.footer
+    .flex.about-us
+        each value, key in theme.foot
+            - var re = /^(http|https):\/\/*/gi;
+            - var target = re.test(value) ? "_blank" : "_self"
+            a.action(href=value target=target)
+                != key

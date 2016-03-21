@@ -1,0 +1,11 @@
+div.aside-content
+    ul.aside-list
+        each value, key in theme.menu
+            - var link = value.link;
+            li(class={true: link === "/"})
+                - var re = /^(http|https):\/\/*/gi;
+                - var target = re.test(value.link) ? "_blank" : "_self"
+                - var klass = value.class;
+                a.aside-list-link(href=link target= target)
+                    i(class=klass)
+                    span= key.toUpperCase()

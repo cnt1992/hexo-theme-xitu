@@ -1,0 +1,11 @@
+header
+    .container.clearfix
+        ul.actions
+            each value, key in theme.menu
+                - var link = value.link;
+                li.action.hide-when-large
+                    - var re = /^(http|https):\/\/*/gi;
+                    - var target = re.test(value.link) ? "_blank" : "_self"
+                    - var klass = value.class;
+                    a(href= link target= target)
+                        i(class= klass)

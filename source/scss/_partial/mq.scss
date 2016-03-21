@@ -1,0 +1,188 @@
+@media (max-width:600px) {
+    .inner {
+        width:80vw;
+        min-width:initial
+    }
+}
+@media (max-width:800px) {
+    .box-list>li, .box-list>li.large {
+        width:50%
+    }
+    .box-list>li.half {
+        width:100%
+    }
+    .box-list>li.half:last-child {
+        margin-bottom:0
+    }
+}
+@media (max-width:600px) {
+    .hide-when-small {
+        display:none!important
+    }
+    .show-when-small {
+        display:block
+    }
+}
+@media (max-width:960px) {
+    .hide-when-not-large {
+        display:none!important
+    }
+}
+@media (min-width:960px) {
+    .hide-when-large {
+        display:none!important
+    }
+}
+@media (min-width:600px) {
+    .action-nav:hover .action-list, .categories-nav:hover .categories {
+        display:block
+    }
+}
+@media (max-width:800px) {
+    nav .container {
+        overflow-x:scroll
+    }
+}
+@media (max-width:960px) {
+    aside {
+        display:none
+    }
+    .with-aside .main, .with-aside .modal, .with-aside header {
+        margin-left:0
+    }
+}
+@media (max-width:960px) {
+    .container {
+        width:100%
+    }
+    .view>.container {
+        padding:0
+    }
+}
+@media (max-width:600px) {
+    .view .inner {
+        width:100%
+    }
+}
+@media (max-width:600px) {
+    #loading-cover {
+        font-size:.8em
+    }
+}
+@media (max-width:600px) {
+    .profile-avatar-container, .profile-info-container {
+        display:block;
+        width:100%
+    }
+    .profile-avatar-container {
+        margin-bottom:1em
+    }
+    .profile-avatar-input-container, .profile-avatar-input-container .avatar {
+        width:5em;
+        height:5em
+    }
+}
+@media (max-width:800px) {
+    .entry-screenshot {
+        display:none
+    }
+}
+@media (max-width:600px) {
+    .entry .entry-author, .entry .entry-hide {
+        display:none
+    }
+    .entry .entry-title {
+        white-space:initial;
+        overflow:auto
+    }
+    .entry-info {
+        width:70%
+    }
+}
+@media (max-width:960px) {
+    .entry-detail-container {
+        width:100%;
+        max-width:100%;
+        background-color:#fff
+    }
+    .entry-background {
+        display:none
+    }
+    .entry-detail-header .entry-close {
+        display:inline;
+        right:0;
+        left:.6em;
+        font-size:1.5em
+    }
+    .entry-detail-header .entry-box {
+        padding:0 2em 2em
+    }
+    .entry-detail-header .entry-box .title {
+        font-size:1em
+    }
+    .entry-detail-header .entry-box .entry-collection {
+        left:2em
+    }
+    .entry-detail-body .entry-detail-left .editor {
+        padding:1em
+    }
+    .entry-detail-body .entry-detail-left .editor .avatar {
+        position:static
+    }
+    .entry-detail-body .entry-detail-left .editor .editor-meta {
+        display:inline-block;
+        margin-left:.5em;
+        vertical-align:bottom
+    }
+    .entry-detail-body .entry-detail-left .editor .editor-content {
+        margin-top:.5em
+    }
+    .entry-detail-body .entry-detail-left .comment-box {
+        padding:0
+    }
+    .entry-detail-body .entry-detail-left .new-comment-card {
+        position:fixed;
+        width:100%;
+        z-index:9;
+        bottom:0;
+        padding-right:5em
+    }
+    .entry-detail-body .entry-detail-left .new-comment-card .small {
+        position:absolute;
+        right:.5em;
+        top:1.15em
+    }
+    .entry-detail-body .entry-detail-left .new-comment-card .comment-submit {
+        width:0;
+        height:0;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        display:block
+    }
+    .entry-detail-body .entry-detail-left .comments {
+        padding-bottom:8em
+    }
+    .entry-detail-body .entry-detail-left .comments .comment {
+        padding:1em 1.5em
+    }
+    .entry-detail-body .entry-detail-left .comments .comment-content {
+        margin-top:.5em
+    }
+    .entry-detail-body .entry-detail-left .comments .editor {
+        padding:0
+    }
+    .entry-detail-body .entry-detail-right {
+        display:none
+    }
+}
+@media (max-width:600px) {
+    .entry-view .entry-hero {
+        height:50vw
+    }
+}
+@media (max-width: 600px) {
+    .archive .post-time {
+        display: none;
+    }
+}

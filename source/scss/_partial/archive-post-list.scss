@@ -1,0 +1,21 @@
+.archive {
+    padding: 1em 2em;
+    .post-item {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 2px 0 0 30px;        
+    }
+    .post-time,
+    .post-title-link {
+        font-size: 1rem;
+    }
+    .post-title-link {
+        color: #42b983;
+    }
+    .post-time {
+        display: inline-block;
+        width: 200px;
+        color: #7f8c8d;
+    }
+}
